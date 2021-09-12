@@ -1,3 +1,5 @@
 .vscode/
 .ipynb_checkpoints/
-papermill_env/
+papermi8ll_env/
+outputs/*
+!outputs/.gitkeep

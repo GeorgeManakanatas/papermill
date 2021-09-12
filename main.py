@@ -1,13 +1,29 @@
 import papermill as pm
 
+params1 = {"target_drive":"I","sound_file":"beep-01a.wav","output_path":"outputs"}
 pm.execute_notebook(
-   'mill1.ipynb',
-   'outputs/output1.ipynb',
-   parameters = dict(alpha=0.6, ratio=0.2)
+   'drive_map_analysis.ipynb',
+   'outputs/drive_map_analysis_output1.ipynb',
+   parameters = params1
 )
 
+params2 = {"target_drive":"C","sound_file":"beep-01a.wav","output_path":"outputs"}
 pm.execute_notebook(
-   'mill2.ipynb',
-   'outputs/output2.ipynb',
-   parameters = dict(alpha=0.4, ratio=0.1 )
+   'drive_map_analysis.ipynb',
+   'outputs/drive_map_analysis_output2.ipynb',
+   parameters = params2
+)
+
+params3 = {"target_drive":"I","sound_file":"beep-01a.wav","output_path":"outputs"}
+pm.execute_notebook(
+   'drive_map.ipynb',
+   'outputs/drive_map_output3.ipynb',
+   parameters = params3
+)
+
+params4 = {"target_drive":"C","sound_file":"beep-01a.wav","output_path":"outputs"}
+pm.execute_notebook(
+   'drive_map.ipynb',
+   'outputs/drive_map_output4.ipynb',
+   parameters = params4
 )
